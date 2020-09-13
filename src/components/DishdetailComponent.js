@@ -9,6 +9,10 @@ class DishDetail extends Component {
     }
 
     render() {
+        if(this.props.dish == null){
+            return "";
+        }
+
         const comments = this.props.dish.comments.map((dish) => {
             return (
               <div key={dish.id} className="col-12 col-md-12 m-1">
